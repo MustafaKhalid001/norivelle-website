@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Shopify Stores | Norivelle Solution</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+        .process-card { background: var(--card-bg); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); text-align: center; position: relative; }
+        .process-number { font-size: 3rem; font-weight: 800; color: rgba(139, 92, 246, 0.1); position: absolute; top: 1rem; right: 1rem; line-height: 1; }
+        @media (max-width: 992px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .process-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Norivelle Solution Logo" style="margin-right: 15px;">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div class="nav-dropdown">
+                    <a href="services.html" style="color: var(--primary);">Services <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
+                    <div class="mega-menu">
+                        <a href="services.html">All Services</a>
+                        <a href="wordpress-development.html">WordPress Development</a>
+                        <a href="shopify-stores.html" style="color: var(--primary);">Shopify Stores</a>
+                        <a href="advanced-seo.html">Advanced SEO</a>
+                        <a href="video-editing.html">Video Editing</a>
+                        <a href="content-writing.html">Content Writing</a>
+                        <a href="social-media-management.html">Social Media Management</a>
+                    </div>
+                </div>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 1rem;">Get Started</a>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero shopify-hero" style="text-align: center;">
+        <div class="container">
+            <h1 style="color: var(--primary); margin-bottom: 20px;">High-Converting Custom Shopify eCommerce Stores</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 30px;">Data-driven, highly optimized eCommerce solutions built to maximize your sales.</p>
+            <a href="contact.html" class="btn btn-primary" style="background-color: #be123c; color: white; padding: 15px 30px; font-size: 16px;">Design Your Shopify Store</a>
+        </div>
+    </section>
+    
+    <div class="container" style="margin-top: -30px; margin-bottom: 50px; text-align: center;">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Shopify Stores" style="width: 100%; max-width: 1000px; height: 500px; object-fit: cover; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+    </div>
+
+    <!-- Deep Dive Section -->
+    <section style="padding: 4rem 0;">
+        <div class="container" style="text-align: center; max-width: 900px;">
+            <h2 style="margin-bottom: 30px;">Comprehensive Service Deep Dive</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">We engineer high-converting custom Shopify stores utilizing advanced Liquid coding. Our data-driven approach focuses intensely on conversion rate optimization (CRO), seamless checkout experiences, robust product catalog management, and bespoke custom app integrations. By implementing optimized sales funnels and secure payment gateway solutions, we build digital storefronts that not only look visually stunning but are rigorously designed to turn your visitors into loyal, paying customers. <i class='fa-solid fa-cart-shopping' style='color: #be123c; margin-left: 5px;'></i></p>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section style="padding: 4rem 0; background-color: var(--bg-secondary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2>Our Proven Process</h2>
+                <p>A data-driven agile methodology ensuring predictable, high-quality results.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"><i class="fa-solid fa-store"></i></div>
+                    <h3 style="margin-bottom: 1rem;">Store Discovery</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Analyzing your products, market, and conversion goals.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"><i class="fa-solid fa-palette"></i></div>
+                    <h3 style="margin-bottom: 1rem;">Custom Liquid Design</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Bespoke, high-converting UX/UI liquid development.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"><i class="fa-solid fa-box-open"></i></div>
+                    <h3 style="margin-bottom: 1rem;">Store Setup & Import</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Secure product catalog migration and configuration.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"><i class="fa-solid fa-plane-departure"></i></div>
+                    <h3 style="margin-bottom: 1rem;">Launch</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Final QA, payment gateway testing, and go-live.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="impactful-services" style="padding: 5rem 0;">
+        <div class="container services-container">
+            <div class="services-header" style="text-align: center; margin-bottom: 40px;">
+                <h2>Why Choose Our Shopify Stores</h2>
+            </div>
+            <div class="main-content-wrapper">
+                <div>
+                    <div class="service-card theme-pink" style="padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow); background-color: white;">
+                        <i class="fa-solid fa-cart-arrow-down" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="margin: 0; font-size: 1.1rem;">High-Converting Store Designs</h4>
+                    </div>
+                    <div class="service-card theme-pink" style="padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow); background-color: white;">
+                        <i class="fa-solid fa-cart-arrow-down" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="margin: 0; font-size: 1.1rem;">Optimized Sales Funnels</h4>
+                    </div>
+                    <div class="service-card theme-pink" style="padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow); background-color: white;">
+                        <i class="fa-solid fa-cart-arrow-down" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="margin: 0; font-size: 1.1rem;">Custom Shopify Apps</h4>
+                    </div>
+                    <div class="service-card theme-pink" style="padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow); background-color: white;">
+                        <i class="fa-solid fa-cart-arrow-down" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="margin: 0; font-size: 1.1rem;">Frictionless Checkout Flows</h4>
+                    </div>
+                    <div class="service-card theme-pink" style="padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow); background-color: white;">
+                        <i class="fa-solid fa-cart-arrow-down" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="margin: 0; font-size: 1.1rem;">Secure Payment Integrations</h4>
+                    </div>
+                    <div class="service-card theme-pink" style="padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow); background-color: white;">
+                        <i class="fa-solid fa-cart-arrow-down" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h4 style="margin: 0; font-size: 1.1rem;">Mobile-First Responsiveness</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="global-faq-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4 class="faq-question">Why choose Shopify over other e-commerce platforms like WooCommerce? <i class="fa-solid fa-chevron-down"></i></h4>
+                    <div class="faq-answer">Shopify is a fully hosted, reliable, and secure core platform designed tailored for sales. We engineer comprehensive digital ecosystems designed to attract and convert. Unlike WooCommerce, Shopify doesn't require separate secure core hosting or constant maintenance of server performance. We build custom liquid stores that provide enterprise-grade reliability and seamless payment integrations for a high-converting store designs.</div>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">Can you migrate my store from another platform to Shopify? <i class="fa-solid fa-chevron-down"></i></h4>
+                    <div class="faq-answer">Yes, absolutely. We are experts in data migration. We build data-driven stores and can securely migrate your entire product catalog (including descriptions, variants, images), customer data, and order history from platforms like WooCommerce, BigCommerce, or Magento. We ensure zero data loss during our detailed Agile migration process.</div>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">Do you provide custom app development for Shopify? <i class="fa-solid fa-chevron-down"></i></h4>
+                    <div class="faq-answer">Yes, if your business rules require bespoke functionality that standard Shopify apps cannot deliver. We have deep expertise in building custom Shopify apps or integrating complex third-party APIs using agile development and clean code methodologies. This allows for maximum scalable tailored functionalities for custom Shopify stores.</div>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">Will my store be mobile-responsive? <i class="fa-solid fa-chevron-down"></i></h4>
+                    <div class="faq-answer">Yes, this is not just a feature; it's a secure core requirement for e-commerce excellence. We build every custom Shopify store with a Mobile-Responsive Design philosophy, ensuring a seamless user experience. We test meticulously across all devices to guarantee maximum high-converting visual storytelling and a frictionless path to purchase.</div>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">Do you help with product photography or description writing for Shopify? <i class="fa-solid fa-chevron-down"></i></h4>
+                    <div class="faq-answer">Our core focus is detailed technical development. We do not provide product photography or full-time product catalog management services. However, we can integrate highly optimized product detail page structures and can provide high-retention visual content or well-researched optimized written content for custom pages like articles or SEO blog writing if required.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Trust-Building Sections -->
+    <!-- 1. Trusted by Clients Worldwide Section -->
+    <section class="trust-worldwide" style="padding: 5rem 0; background-color: var(--bg-color); text-align: center;">
+        <div class="container">
+            <h4 style="color: var(--primary); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Inter', sans-serif;">Global Authority & Partnerships</h4>
+            <h2 style="color: var(--primary); margin-bottom: 20px; font-family: 'Inter', sans-serif;">Trusted by Clients Worldwide: Provoking Proven Results</h2>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 40px; color: var(--text-muted);">We Don't Just Offer Services; We Deliver The Outcomes That Matter Most To Your Business.</p>
+
+            <div class="process-grid" style="margin-bottom: 40px;">
+                <div class="process-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3 style="margin-bottom: 10px; font-family: 'Inter', sans-serif;">7+ Years</h3>
+                    <p style="color: var(--text-muted);">Experienced Leadership</p>
+                </div>
+                <div class="process-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3 style="margin-bottom: 10px; font-family: 'Inter', sans-serif;">99.9%</h3>
+                    <p style="color: var(--text-muted);">Data-Driven Results</p>
+                </div>
+                <div class="process-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-globe"></i></div>
+                    <h3 style="margin-bottom: 10px; font-family: 'Inter', sans-serif;">250+</h3>
+                    <p style="color: var(--text-muted);">Global Clients</p>
+                </div>
+                <div class="process-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-trophy"></i></div>
+                    <h3 style="margin-bottom: 10px; font-family: 'Inter', sans-serif;">600+</h3>
+                    <p style="color: var(--text-muted);">Proven Projects</p>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 50px;">
+                <div style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check" style="color: var(--primary); font-weight: bold; font-size: 1.2rem;"></i> <span style="font-weight: 500; font-family: 'Inter', sans-serif;">Transparent Communication</span></div>
+                <div style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check" style="color: var(--primary); font-weight: bold; font-size: 1.2rem;"></i> <span style="font-weight: 500; font-family: 'Inter', sans-serif;">Proactive Support</span></div>
+                <div style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check" style="color: var(--primary); font-weight: bold; font-size: 1.2rem;"></i> <span style="font-weight: 500; font-family: 'Inter', sans-serif;">Unwavering Focus on ROI</span></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 30px; align-items: center; justify-items: center;">
+                <div style="text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-flag-usa" style="font-size: 2.5rem; margin-bottom: 10px; color: var(--primary);"></i><br><span style="font-family: 'Inter', sans-serif; font-weight: 600;">USA</span></div>
+                <div style="text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-earth-europe" style="font-size: 2.5rem; margin-bottom: 10px; color: var(--primary);"></i><br><span style="font-family: 'Inter', sans-serif; font-weight: 600;">Europe</span></div>
+                <div style="text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-earth-asia" style="font-size: 2.5rem; margin-bottom: 10px; color: var(--primary);"></i><br><span style="font-family: 'Inter', sans-serif; font-weight: 600;">Asia</span></div>
+                <div style="text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-earth-oceania" style="font-size: 2.5rem; margin-bottom: 10px; color: var(--primary);"></i><br><span style="font-family: 'Inter', sans-serif; font-weight: 600;">Australia</span></div>
+                <div style="text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-phone" style="font-size: 2.5rem; margin-bottom: 10px; color: var(--primary);"></i><br><span style="font-family: 'Inter', sans-serif; font-weight: 600;">+92 3390042765</span></div>
+            </div>
+            <div style="margin-top: 40px; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Global Reach" style="width: 100%; max-width: 800px; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Norivelle Solution's Promise Section -->
+    <section class="trust-promise" style="padding: 5rem 0; background-color: var(--bg-secondary); text-align: center;">
+        <div class="container">
+            <h4 style="color: var(--primary); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Inter', sans-serif;">Flexibility & Transparency</h4>
+            <h2 style="color: var(--primary); margin-bottom: 40px; font-family: 'Inter', sans-serif;">Our Promise to You: A Committed Strategic Partner</h2>
+
+            <div class="process-grid">
+                <div class="process-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 style="margin-bottom: 10px; font-family: 'Inter', sans-serif;">Custom-Built Strategies</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Data-driven approaches explicitly designed for maximum scalable ROI.</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.9rem; color: var(--text-muted);">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Expert Content Creation</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> SEO-Optimized Keywords</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Audience Engagement Focused</li>
+                    </ul>
+                </div>
+                <div class="process-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 style="margin-bottom: 10px; font-family: 'Inter', sans-serif;">Transparent ROI</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Measurable results utilizing analytics for every campaign we execute.</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.9rem; color: var(--text-muted);">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Clear Data Reporting</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Conversion Tracking</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Profit Margin Focus</li>
+                    </ul>
+                </div>
+                <div class="process-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-handshake"></i></div>
+                    <h3 style="margin-bottom: 10px; font-family: 'Inter', sans-serif;">Dedicated Partnership</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Long-term commitment to strategic content creation and brand growth.</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.9rem; color: var(--text-muted);">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Strategic Planning</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Proactive Advising</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Continuous Optimization</li>
+                    </ul>
+                </div>
+                <div class="process-card" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3 style="margin-bottom: 10px; font-family: 'Inter', sans-serif;">Unwavering Guarantee</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">100% satisfaction guaranteed. Your enterprise success is our priority.</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; font-size: 0.9rem; color: var(--text-muted);">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Quality Assurance</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Refund Policy</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 5px;"></i> Zero Risk Engagement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Our Domain Diversity Section -->
+    <section class="trust-diversity" style="padding: 5rem 0; background-color: var(--bg-color); text-align: center;">
+        <div class="container">
+            <h4 style="color: var(--primary); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Inter', sans-serif;">Solutions Across Verticals</h4>
+            <h2 style="color: var(--primary); margin-bottom: 20px; font-family: 'Inter', sans-serif;">Domain Diversity: Proven Expertise Across Diverse Sectors</h2>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 40px; color: var(--text-muted);">We leverage modern multi-device and technology-specific solutions tailored precisely for your industry requirements.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 2rem;">
+                <div class="process-card" style="transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.backgroundColor='rgba(139, 92, 246, 0.05)'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.transform='scale(1)';">
+                    <i class="fa-solid fa-cart-shopping" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: color 0.3s ease;" onmouseover="this.style.color='#be123c'" onmouseout="this.style.color='var(--primary)'"></i>
+                    <h4 style="margin:0; font-family: 'Inter', sans-serif;">eCommerce</h4>
+                </div>
+                <div class="process-card" style="transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.backgroundColor='rgba(139, 92, 246, 0.05)'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.transform='scale(1)';">
+                    <i class="fa-solid fa-graduation-cap" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: color 0.3s ease;" onmouseover="this.style.color='#047857'" onmouseout="this.style.color='var(--primary)'"></i>
+                    <h4 style="margin:0; font-family: 'Inter', sans-serif;">Education</h4>
+                </div>
+                <div class="process-card" style="transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.backgroundColor='rgba(139, 92, 246, 0.05)'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.transform='scale(1)';">
+                    <i class="fa-solid fa-users" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: color 0.3s ease;" onmouseover="this.style.color='#be123c'" onmouseout="this.style.color='var(--primary)'"></i>
+                    <h4 style="margin:0; font-family: 'Inter', sans-serif;">Social</h4>
+                </div>
+                <div class="process-card" style="transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.backgroundColor='rgba(139, 92, 246, 0.05)'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.transform='scale(1)';">
+                    <i class="fa-solid fa-briefcase" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: color 0.3s ease;" onmouseover="this.style.color='#047857'" onmouseout="this.style.color='var(--primary)'"></i>
+                    <h4 style="margin:0; font-family: 'Inter', sans-serif;">Business</h4>
+                </div>
+                <div class="process-card" style="transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.backgroundColor='rgba(139, 92, 246, 0.05)'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.transform='scale(1)';">
+                    <i class="fa-solid fa-microchip" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: color 0.3s ease;" onmouseover="this.style.color='#be123c'" onmouseout="this.style.color='var(--primary)'"></i>
+                    <h4 style="margin:0; font-family: 'Inter', sans-serif;">Technology</h4>
+                </div>
+                <div class="process-card" style="transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.backgroundColor='rgba(139, 92, 246, 0.05)'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.transform='scale(1)';">
+                    <i class="fa-solid fa-hand-holding-heart" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: color 0.3s ease;" onmouseover="this.style.color='#047857'" onmouseout="this.style.color='var(--primary)'"></i>
+                    <h4 style="margin:0; font-family: 'Inter', sans-serif;">Non-Profit</h4>
+                </div>
+                <div class="process-card" style="transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.backgroundColor='rgba(139, 92, 246, 0.05)'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.transform='scale(1)';">
+                    <i class="fa-solid fa-industry" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: color 0.3s ease;" onmouseover="this.style.color='#be123c'" onmouseout="this.style.color='var(--primary)'"></i>
+                    <h4 style="margin:0; font-family: 'Inter', sans-serif;">Industry</h4>
+                </div>
+                <div class="process-card" style="transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.backgroundColor='rgba(139, 92, 246, 0.05)'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.transform='scale(1)';">
+                    <i class="fa-solid fa-building" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: color 0.3s ease;" onmouseover="this.style.color='#047857'" onmouseout="this.style.color='var(--primary)'"></i>
+                    <h4 style="margin:0; font-family: 'Inter', sans-serif;">Real Estate</h4>
+                </div>
+            </div>
+            <style>
+                @media (max-width: 992px) { .trust-diversity .process-grid, .trust-diversity .container > div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+                @media (max-width: 768px) { .trust-diversity .process-grid, .trust-diversity .container > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+            </style>
+        </div>
+    </section>
+
+    <!-- 4. Unwavering Commitment Section -->
+    <section class="trust-guarantee" style="padding: 6rem 0; background-color: var(--bg-secondary); text-align: center; border-bottom: 1px solid var(--border-color);">
+        <div class="container" style="max-width: 800px;">
+            <div style="margin-bottom: 30px; display: inline-block; padding: 20px; background: rgba(139, 92, 246, 0.1); border-radius: 50%; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 30px rgba(139, 92, 246, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                <i class="fa-solid fa-certificate" style="font-size: 4rem; color: var(--primary);"></i>
+            </div>
+            <h4 style="color: var(--primary); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Inter', sans-serif;">Peace of Mind for Enterprise Clients</h4>
+            <h2 style="color: var(--primary); margin-bottom: 25px; font-family: 'Inter', sans-serif;">Norivelle Solution's 100% Satisfaction Guarantee</h2>
+            <p style="font-size: 1.25rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 40px; font-style: italic;">
+                "Your success is our priority. We flawlessly stand by the quality of our services. If you're not completely satisfied, just contact our friendly support team for a full refund—no questions asked."
+            </p>
+            <div style="margin-bottom: 40px; text-align: center;">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="100% Satisfaction Guarantee" style="width: 100%; max-width: 600px; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <a href="contact.html" class="btn btn-primary" style="background-color: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 15px 40px; font-size: 16px; border-radius: 50px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='var(--primary)'; this.style.color='white'; this.style.boxShadow='0 5px 15px rgba(139,92,246,0.4)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary)'; this.style.boxShadow='none';">Contact Our Team</a>
+        </div>
+    </section>
+    <!-- End Global Trust-Building Sections -->
+
+    <!-- Final CTA & Form Section -->
+    <section style="padding: 5rem 0; background-color: var(--bg-color);">
+        <div class="container" style="max-width: 800px;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-size: 36px; margin-bottom: 15px;">Ready to Elevate Your Digital Presence?</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted);">Fill out the inquiry form below and let's discuss how we can engineer a custom solution tailored for your specific goals.</p>
+            </div>
+            
+            <div class="norivelle-contact-wrapper">
+              <div class="form-header">
+                <h4>REACH OUT AND CONNECT</h4>
+                <h2>Get in Touch With Us</h2>
+              </div>
+              
+              <form action="#" method="POST" class="norivelle-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Company Name *</label>
+                    <input type="text" class="form-control" placeholder="Please enter your organization Name" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="name@domain.com" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" pattern="\+?[0-9]{1,3}[0-9]{10,}" title="Please enter a valid phone number (e.g., +923001234567 or 1234567890)" placeholder="e.g., +923001234567" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="country">Country *</label>
+                  <select id="country" name="country" class="form-control" required>
+                    <option value="" disabled selected>-- Please select your country --</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="India">India</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Interested Service *</label>
+                  <div class="services-grid">
+                    <label class="checkbox-label"><input type="checkbox" name="services[]" value="Custom Web Design"> Custom Web Design</label>
+                    <label class="checkbox-label"><input type="checkbox" name="services[]" value="E-commerce (Shopify/Woo)"> E-commerce (Shopify/Woo)</label>
+                    <label class="checkbox-label"><input type="checkbox" name="services[]" value="Advanced SEO"> Advanced SEO</label>
+                    <label class="checkbox-label"><input type="checkbox" name="services[]" value="Video Editing"> Video Editing</label>
+                    <label class="checkbox-label"><input type="checkbox" name="services[]" value="Content & Copywriting"> Content & Copywriting</label>
+                    <label class="checkbox-label"><input type="checkbox" name="services[]" value="Other"> Other</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Message *</label>
+                  <textarea id="message" name="message" class="form-control" placeholder="Write your message here..." rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Do you have any reference files? (Optional)</label>
+                  <div class="file-upload-wrapper">
+                    <input type="file" name="reference_file" class="file-input">
+                  </div>
+                </div>
+                <button type="submit" class="submit-btn">SUBMIT INQUIRY</button>
+              </form>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1rem;">
+                        <img src="logo.png" alt="Norivelle Solution Logo" style="height: 200px; margin-right: 15px; filter: brightness(0) invert(1);">
+                    </a>
+                    <p>INNOVATE, ELEVATE, SUCCEED.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <div class="footer-links">
+                        <a href="mailto:info@norivellesolution.com"><i class="fa-solid fa-envelope"></i> info@norivellesolution.com</a>
+                        <a href="tel:+923390042765"><i class="fa-solid fa-phone"></i> +92 3390042765</a>
+                        <span><i class="fa-solid fa-location-dot"></i> P Block, Gulberg III, Lahore, Pakistan</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Norivelle Solution. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      // FAQ Accordion logic
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      });
+    </script>
+</body>
+</html>
