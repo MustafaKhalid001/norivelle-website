@@ -1,0 +1,9 @@
+{
+  "name": "norivelle-solution",
+  "version": "1.0.0",
+  "description": "Norivelle Solution Website",
+  "scripts": {},
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+}
