@@ -10,7 +10,7 @@ const pool = new Pool({
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
