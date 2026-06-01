@@ -140,9 +140,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Favicon Injection
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.href = 'images/logo.png';
+    favicon.type = 'image/png';
+    document.head.appendChild(favicon);
+
     // --- AI Chatbot Injection & Logic ---
     const chatbotStyles = document.createElement('style');
-    chatbotStyles.innerHTML = 
+    chatbotStyles.innerHTML = `
         /* Chatbot CSS */
         #nv-chatbot-container {
             position: fixed;
@@ -367,10 +374,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 height: 400px;
             }
         }
-    ;
+    `;
     document.head.appendChild(chatbotStyles);
 
-    const chatbotHTML = \
+    const chatbotHTML = `
         <div id="nv-chatbot-container">
             <div id="nv-chatbot-window">
                 <div id="nv-chatbot-header">
@@ -378,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div id="nv-chatbot-close"><i class="fa-solid fa-xmark"></i></div>
                 </div>
                 <div id="nv-chatbot-messages">
-                    <div class="nv-chat-bubble nv-chat-bot">Hi there! ?? I'm the Norivelle AI assistant. How can I help you with your digital needs today?</div>
+                    <div class="nv-chat-bubble nv-chat-bot">Hi there! 👋 I'm the Norivelle AI assistant. How can I help you with your digital needs today?</div>
                 </div>
                 <div id="nv-chatbot-input-container">
                     <input type="text" id="nv-chatbot-input" placeholder="Type your message..." autocomplete="off">
@@ -389,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <i class="fa-solid fa-message"></i>
             </div>
         </div>
-    \;
+    `;
     document.body.insertAdjacentHTML('beforeend', chatbotHTML);
 
     // Chatbot Logic
@@ -420,8 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addMessageToUI = (text, isUser) => {
         const bubble = document.createElement('div');
-        bubble.className = \
-v-chat-bubble \\;
+        bubble.className = `nv-chat-bubble ${isUser ? 'nv-chat-user' : 'nv-chat-bot'}`;
         bubble.textContent = text;
         messagesContainer.appendChild(bubble);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
