@@ -1580,3 +1580,63 @@ nav a:hover, .footer-links a:hover {
 [data-theme="dark"] .cert-img:hover {
   filter: brightness(0) invert(1) opacity(100%);
 }
+
+/* =========================================
+   HERO SECTION CTA BUTTONS (Premium Formatting)
+   ========================================= */
+.hero-cta-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.hero-cta-group a.btn-primary, .hero-cta-group a.btn-outline {
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+}
+
+.hero-cta-group a.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+    border: none;
+}
+
+.hero-cta-group a.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.5);
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+}
+
+.hero-cta-group a.btn-outline {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--text-main) !important;
+}
+
+.hero-cta-group a.btn-outline:hover {
+    background: var(--accent);
+    color: #ffffff !important;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    .hero-cta-group a.btn-primary, .hero-cta-group a.btn-outline {
+        width: 100%;
+    }
+}
