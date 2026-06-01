@@ -1448,3 +1448,65 @@ nav a:hover, .footer-links a:hover {
     color: white !important;
     transform: scale(1.2) !important;
 }
+
+/* Trust Promise Section (Our Promise to You) 2x2 Grid & Styling */
+.trust-promise .process-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 3rem !important;
+    margin-top: 4rem !important;
+}
+
+@media (max-width: 768px) {
+    .trust-promise .process-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.trust-promise .process-card {
+    padding: 3rem 2.5rem !important;
+    border-radius: 12px !important;
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(139, 92, 246, 0.3) !important; /* Highlight borders */
+    transition: all 0.3s ease !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+}
+
+/* Hover Effect Identical to Domain Diversity */
+.trust-promise .process-card:hover {
+    background: linear-gradient(135deg, #4a154b, #8b5cf6) !important;
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3) !important;
+    border-color: transparent !important;
+}
+
+/* Base Text Colors */
+.trust-promise .process-card h3 { transition: color 0.3s ease !important; }
+.trust-promise .process-card p { transition: color 0.3s ease !important; }
+.trust-promise .process-card ul { transition: color 0.3s ease !important; }
+.trust-promise .process-card ul li i { transition: color 0.3s ease !important; }
+.trust-promise .process-card > div { transition: all 0.3s ease !important; }
+
+/* Text Color on Hover (Turn White) */
+.trust-promise .process-card:hover h3,
+.trust-promise .process-card:hover p,
+.trust-promise .process-card:hover ul,
+.trust-promise .process-card:hover ul li,
+.trust-promise .process-card:hover ul li i {
+    color: white !important;
+}
+
+/* Main Icon on Hover */
+.trust-promise .process-card:hover > div i {
+    color: white !important;
+    transform: scale(1.2) !important;
+}
+
+.trust-promise .process-card > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
