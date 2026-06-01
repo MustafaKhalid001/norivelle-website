@@ -26,16 +26,12 @@
   --text-muted: #a3a3a3;
   --card-bg: #2a2a2a;
   --border-color: #333333;
-  --primary: #E6D4F9; /* High-contrast bright glowing lilac */
+  --primary: #8b5cf6; /* Vibrant violet */
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
   --header-bg: rgba(15, 23, 42, 0.8);
 }
 
-/* Fix Button text legibility when --primary is bright in dark mode */
-[data-theme="dark"] .btn-primary {
-  color: #1a1a1a;
-  font-weight: 700;
-}
+
 
 /* Fix Logo visibility in dark mode */
 [data-theme="dark"] header .logo img {
@@ -856,7 +852,7 @@ footer {
 }
 
 .check-icon {
-  background-color: var(--primary); 
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   border-radius: 50%;
   width: 20px;
@@ -875,27 +871,7 @@ footer {
   margin-bottom: 60px;
 }
 
-.hero-cta-group .btn-primary, .hero-cta-group .btn-secondary {
-  padding: 15px 32px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
 
-.hero-cta-group .btn-primary {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-}
-.hero-cta-group .btn-primary:hover { background-color: #dc2626; color: white;}
-
-.hero-cta-group .btn-secondary {
-  background-color: var(--brand-blue);
-  color: white;
-}
-.hero-cta-group .btn-secondary:hover { background-color: #1e3a8a; }
 
 /* Trust Ratings */
 .trust-ratings {
