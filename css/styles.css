@@ -1201,16 +1201,16 @@ footer {
 
 /* 1. Keep the Logo at 200px (As requested) */
 header img,
-#header img,
-.site-logo img,
-.logo img,
-.logo-image,
-.navbar img {
-    max-height: 200px !important;
-    height: 200px !important;
+/* Fixed Logo Size & Navbar Height */
+#header img, .site-logo img, .logo img, .logo-image, .navbar img {
+    height: 240px !important;
+    max-height: 240px !important;
     width: auto !important;
-    margin: 0 !important;
+    margin-top: -80px !important;
+    margin-bottom: -80px !important;
+    margin-left: -20px !important;
 }
+header { height: 80px; display: flex; align-items: center; }
 
 /* 2. RESET: Remove any negative margins causing the overlap */
 .main-content-wrapper,
