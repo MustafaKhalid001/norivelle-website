@@ -1598,3 +1598,11 @@ nav a:hover, .footer-links a:hover {
     color: white !important;
     opacity: 0.5 !important;
 }
+
+/* Cert Logos Dark Mode Visibility Fix */
+[data-theme="dark"] .cert-img {
+  filter: brightness(0) invert(1) opacity(60%);
+}
+[data-theme="dark"] .cert-img:hover {
+  filter: brightness(0) invert(1) opacity(100%);
+}
