@@ -987,7 +987,7 @@ footer {
   margin-top: 20px;
 }
 
-.cert-img { background-color: white !important; padding: 10px !important; border-radius: 8px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important; 
+.cert-img {
   height: 70px; /* Logos ki height set ki hai taake sab ek size ke lagain */
   width: auto;
   object-fit: contain;
@@ -1007,7 +1007,7 @@ footer {
   .cert-logos {
     gap: 20px;
   }
-  .cert-img { background-color: white !important; padding: 10px !important; border-radius: 8px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important; 
+  .cert-img {
     height: 50px;
   }
 }
@@ -1216,7 +1216,7 @@ footer {
   .hero-title { font-size: 32px; }
   .hero-tag { font-size: 11px; padding: 4px 12px; }
   .cert-logos { gap: 20px; }
-  .cert-img { background-color: white !important; padding: 10px !important; border-radius: 8px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;  height: 40px; }
+  .cert-img { height: 40px; }
   .hero-cta-group { flex-direction: column; gap: 10px; width: 100%; }
   .hero-cta-group a { width: 100%; justify-content: center; }
 }
