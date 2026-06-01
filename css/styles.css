@@ -1228,7 +1228,7 @@ body > main > section:first-child,
 /* 3. The Perfect Push: Push body down exactly by the header's height */
 /* If logo is 200px, header is around 230px tall. This starts content right below it. */
 body, #app, #root, #content, #main, #main-content {
-    padding-top: 230px !important; 
+    padding-top: 140px !important; 
 }
 
 /* ==================================================
