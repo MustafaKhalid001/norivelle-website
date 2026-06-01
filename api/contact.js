@@ -1,4 +1,5 @@
 const { Pool } = require('pg');
+const { Resend } = require('resend');
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -6,6 +7,8 @@ const pool = new Pool({
     rejectUnauthorized: false
   }
 });
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -41,9 +44,30 @@ export default async function handler(req, res) {
 
     const result = await pool.query(query, values);
 
+    // After successful database insert, send the email!
+    if (process.env.RESEND_API_KEY && process.env.ADMIN_EMAIL) {
+      await resend.emails.send({
+        from: 'Norivelle Solution <onboarding@resend.dev>', // Resend's default testing domain
+        to: process.env.ADMIN_EMAIL,
+        subject: `New Contact Form Lead: ${name}`,
+        html: `
+          <h2>New Lead from Norivelle Website</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Company:</strong> ${company || 'N/A'}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Country:</strong> ${country}</p>
+          <p><strong>Services Interested:</strong> ${servicesStr || 'N/A'}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <h3>Message:</h3>
+          <p>${message.replace(/\n/g, '<br>')}</p>
+        `
+      });
+    }
+
     return res.status(200).json({ success: true, id: result.rows[0].id });
   } catch (error) {
-    console.error('Database Error:', error);
+    console.error('Database/Email Error:', error);
     
     // If table doesn't exist, provide a helpful message
     if (error.code === '42P01') {
