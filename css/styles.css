@@ -1423,7 +1423,7 @@ nav a:hover, .footer-links a:hover {
 }
 
 .trust-diversity .process-card:hover {
-    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    background: linear-gradient(135deg, #4a154b, #8b5cf6) !important;
     transform: translateY(-10px) !important;
     box-shadow: 0 15px 35px rgba(139, 92, 246, 0.3) !important;
     border-color: transparent !important;
