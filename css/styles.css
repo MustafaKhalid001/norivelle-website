@@ -1764,3 +1764,30 @@ nav a:hover, .footer-links a:hover {
     color: var(--primary) !important;
   }
 }
+
+/* ==================================================
+   MOBILE MENU OVERLAPPING FIX (Z-INDEX)
+   ================================================== */
+@media (max-width: 992px) {
+  .nav-links {
+    z-index: 99999 !important;
+    background-color: var(--bg-color) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    padding-bottom: 100px !important;
+  }
+  
+  .mega-menu {
+    background-color: var(--bg-secondary) !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    width: 95% !important;
+    margin: 15px auto !important;
+  }
+  
+  .mega-menu a {
+    font-weight: 600 !important;
+    color: var(--text-main) !important;
+  }
+}
