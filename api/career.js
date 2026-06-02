@@ -17,7 +17,7 @@ module.exports = async function handler(req, res) {
     });
 
     const { 
-      type, name, email, phone, address, 
+      type, name, email, phone, address, age,
       job_title, experience, salary, education, 
       certifications, resume_link, cover_link, files 
     } = req.body;
@@ -35,6 +35,7 @@ module.exports = async function handler(req, res) {
         email VARCHAR(255),
         phone VARCHAR(100),
         address TEXT,
+        age VARCHAR(10),
         job_title VARCHAR(255),
         experience VARCHAR(100),
         salary VARCHAR(100),
@@ -47,19 +48,25 @@ module.exports = async function handler(req, res) {
     `;
     await pool.query(createTableQuery);
 
+    try {
+      await pool.query('ALTER TABLE applications ADD COLUMN IF NOT EXISTS age VARCHAR(10);');
+    } catch (e) {
+      console.log('Age column might already exist or table creation failed.');
+    }
+
     // Insert data
     const insertQuery = `
       INSERT INTO applications (
-        application_type, name, email, phone, address, 
+        application_type, name, email, phone, address, age,
         job_title, experience, salary, education, 
         certifications, resume_link, cover_link
       )
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
       RETURNING id;
     `;
     
     const values = [
-      type, name, email, phone, address || '', 
+      type, name, email, phone, address || '', age || '',
       job_title || '', experience || '', salary || '', education || '', 
       certifications || '', resume_link || '', cover_link || ''
     ];
@@ -92,6 +99,7 @@ module.exports = async function handler(req, res) {
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Address:</strong> ${address}</p>
+          <p><strong>Age:</strong> ${age}</p>
           <br/>
           <h3>Professional Details</h3>
           <p><strong>Job Title:</strong> ${job_title}</p>
