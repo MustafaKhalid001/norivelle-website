@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
             display: flex;
             justify-content: center;
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         #nv-chatbot-header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
             padding: 15px 20px;
             display: flex;
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         .nv-chat-user {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
             align-self: flex-end;
             border-bottom-right-radius: 4px;
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         #nv-chatbot-send:hover {
             transform: scale(1.1);
-            background: var(--secondary);
+            background: var(--accent);
         }
         
         #nv-chatbot-send:disabled {
