@@ -334,9 +334,9 @@ def generate_html(page):
                 <div>
 '''
     for feature in page['features_list']:
-        html += f'''                    <div class="service-card {page['features_theme']}" style="padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow); background-color: white;">
+        html += f'''                    <div class="service-card {page['features_theme']}" style="padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: var(--shadow); background-color: var(--bg-secondary);">
                         <i class="fa-solid {page['features_icon']}" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                        <h4 style="margin: 0; font-size: 1.1rem;">{feature}</h4>
+                        <h4 style="margin: 0; font-size: 1.1rem; color: var(--text-color);">{feature}</h4>
                     </div>\n'''
 
     html += f'''                </div>
