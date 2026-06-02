@@ -792,6 +792,12 @@ footer {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+  text-align: center;
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%;
 }
 
 .hero-tag {
