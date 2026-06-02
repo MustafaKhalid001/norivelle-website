@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
             // Optional: Close all other FAQs
-            // faqItems.forEach(i => i.classList.remove('active'));
+            faqItems.forEach(i => i.classList.remove('active'));
             if (!isActive) {
                 item.classList.add('active');
             } else {
