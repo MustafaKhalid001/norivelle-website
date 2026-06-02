@@ -1186,12 +1186,23 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { 
+    grid-template-columns: 1fr; 
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .services-container, .impactful-services {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .service-card, .culture-card, .job-card, .value-card, .team-card {
+    width: calc(100% - 20px) !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
   .services-header h2 { font-size: 28px; }
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
   .hero-title { font-size: 32px; }
   .hero-tag { font-size: 11px; padding: 4px 12px; }
   .cert-logos { gap: 20px; }
