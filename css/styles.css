@@ -1791,3 +1791,48 @@ nav a:hover, .footer-links a:hover {
     color: var(--text-main) !important;
   }
 }
+
+/* ==================================================
+   MOBILE SPACING & CTA SIZING FIXES
+   ================================================== */
+@media (max-width: 768px) {
+  /* 1. Give the Hero content horizontal padding and center alignment */
+  .hero-content {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    text-align: center !important;
+  }
+  
+  /* 2. Give the main container proper padding so cards don't touch the edges */
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 3. Fix the Hero CTA Buttons - Smaller, centered, proper width */
+  .hero-cta-group {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: 25px !important;
+  }
+  .hero-cta-group a.btn-primary, .hero-cta-group a.btn-outline {
+    width: 85% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    padding: 14px 20px !important;
+    font-size: 14px !important;
+  }
+  
+  /* 4. Ensure hero benefits are centered */
+  .hero-benefits {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .benefit-item {
+    text-align: left !important;
+  }
+}
