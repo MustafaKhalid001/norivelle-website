@@ -1734,12 +1734,34 @@ nav a:hover, .footer-links a:hover {
 }
 
 @media (max-width: 768px) {
+  .jobs-list {
+      flex-direction: row !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px !important;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      /* Add slight negative margin to allow cards to bleed to the screen edges while scrolling */
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+  }
+  .jobs-list::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+  }
+  
   .job-card { 
+      min-width: 85vw !important; /* Make card take up 85% of screen so the next one peeks in */
+      width: 85vw !important;
+      scroll-snap-align: center;
+      flex-shrink: 0;
+      margin: 0 !important; /* Override global auto margin */
       flex-direction: column !important; 
       align-items: flex-start !important; 
       gap: 1.2rem !important; 
   }
-  .job-tags { 
+  .job-tags, .job-meta { 
       flex-wrap: wrap !important; 
       gap: 0.8rem !important; 
   }
