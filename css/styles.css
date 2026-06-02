@@ -1687,3 +1687,22 @@ nav a:hover, .footer-links a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Force 3x2 grid for sub-service feature cards */
+.main-content-wrapper > div {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+}
+
+@media (max-width: 992px) {
+    .main-content-wrapper > div {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content-wrapper > div {
+        grid-template-columns: 1fr !important;
+    }
+}
