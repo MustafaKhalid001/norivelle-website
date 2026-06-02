@@ -783,20 +783,6 @@ footer {
   box-shadow: var(--shadow);
 }
 
-.job-info h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.job-tags {
-  display: flex;
-  --brand-purple-light: #5b21b6;
-  --brand-blue: #0d47a1;
-}
-
-.norivelle-hero-wrapper {
-  background-color: var(--bg-color);
-  color: var(--text-main);
   text-align: center;
   padding-top: 60px;
   overflow: hidden;
@@ -1715,4 +1701,32 @@ nav a:hover, .footer-links a:hover {
     .main-content-wrapper > div {
         grid-template-columns: 1fr !important;
     }
+}
+
+/* ==================================================
+   JOB CARD & TAGS FIX FOR MOBILE
+   ================================================== */
+.job-tags {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .job-card { 
+      flex-direction: column !important; 
+      align-items: flex-start !important; 
+      gap: 1.2rem !important; 
+  }
+  .job-tags { 
+      flex-wrap: wrap !important; 
+      gap: 0.8rem !important; 
+  }
+  .job-card .btn { 
+      font-size: 0.9rem !important; 
+      padding: 10px 16px !important; 
+      width: 100% !important; 
+      text-align: center !important; 
+  }
 }
