@@ -1234,11 +1234,7 @@ body, #app, #root, #content, #main, #main-content {
 /* ==================================================
    CAREER & CONTACT US PAGE HEADINGS GAP FIX
    ================================================== */
-.careers-hero,
-.contact-hero {
-    margin-top: 0 !important;
-    padding-top: 20px !important; /* Keep a minimal 20px gap above the heading */
-}
+.about-hero, .services-hero, .contact-hero, .careers-hero { margin-top: 0 !important; padding-top: 10px !important; padding-bottom: 20px !important; }
 
 /* ==================================================
    NORIVELLE SOLUTION: ELITE UX/UI FIXES
