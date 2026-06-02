@@ -344,6 +344,8 @@ def generate_html(page):
         </div>
     </section>
 
+{trust_block_html}
+
     <!-- FAQ Section -->
     <section class="global-faq-section">
         <div class="container">
@@ -359,21 +361,6 @@ def generate_html(page):
                 </div>\n'''
 
     html += f'''            </div>
-        </div>
-    </section>
-
-{trust_block_html}
-
-    <!-- Final CTA & Form Section -->
-    <section style="padding: 5rem 0; background-color: var(--bg-color);">
-        <div class="container" style="max-width: 800px;">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-size: 36px; margin-bottom: 15px;">Ready to Elevate Your Digital Presence?</h2>
-                <p style="font-size: 1.1rem; color: var(--text-muted);">Fill out the inquiry form below and let's discuss how we can engineer a custom solution tailored for your specific goals.</p>
-            </div>
-            
-            {form_html}
-            
         </div>
     </section>
 
