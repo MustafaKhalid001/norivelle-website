@@ -783,6 +783,7 @@ footer {
   box-shadow: var(--shadow);
 }
 
+.norivelle-hero-wrapper {
   text-align: center;
   padding-top: 60px;
   overflow: hidden;
