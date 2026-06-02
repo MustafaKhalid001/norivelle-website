@@ -558,4 +558,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         hoverElements.forEach(el => hoverObserver.observe(el));
     }
+    // Mega Menu Mobile Handling
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+    navDropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        const menu = dropdown.querySelector('.mega-menu');
+        if (link && menu) {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    menu.classList.toggle('mobile-open');
+                    const icon = link.querySelector('i');
+                    if (icon) {
+                        if (menu.classList.contains('mobile-open')) {
+                            icon.classList.remove('fa-chevron-down');
+                            icon.classList.add('fa-chevron-up');
+                        } else {
+                            icon.classList.remove('fa-chevron-up');
+                            icon.classList.add('fa-chevron-down');
+                        }
+                    }
+                }
+            });
+        }
+    });
 });

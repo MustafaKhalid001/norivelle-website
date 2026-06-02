@@ -1730,3 +1730,28 @@ nav a:hover, .footer-links a:hover {
       text-align: center !important; 
   }
 }
+
+/* ==================================================
+   MOBILE MEGA MENU FIX
+   ================================================== */
+@media (max-width: 992px) {
+  .mega-menu {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: 10px !important;
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .mega-menu.mobile-open {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .mega-menu a {
+    padding-left: 30px !important;
+  }
+}
