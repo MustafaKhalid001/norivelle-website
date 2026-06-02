@@ -1855,4 +1855,16 @@ nav a:hover, .footer-links a:hover {
   .benefit-item {
     text-align: left !important;
   }
+  
+  /* 5. Contact Page Layout Fix */
+  .contact-layout {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 2.5rem !important;
+  }
+  .contact-left, .contact-right {
+    width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
 }
