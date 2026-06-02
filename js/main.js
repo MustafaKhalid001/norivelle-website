@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -125,7 +125,25 @@
                 const result = await response.json();
 
                 if (response.ok) {
-                    alert('Thank you! Your message has been sent successfully.');
+                    const contactModal = document.getElementById('contact-success-modal');
+                    if (contactModal) {
+                        const nameInput = document.getElementById('name');
+                        const genderInput = document.getElementById('gender');
+                        
+                        const userName = nameInput && nameInput.value ? nameInput.value.trim() : 'Valued Client';
+                        const userGender = genderInput && genderInput.value ? genderInput.value : 'Male';
+                        const titleStr = userGender === 'Female' ? 'Mam' : 'Sir';
+                        
+                        const titleEl = document.getElementById('contact_modal_title');
+                        const nameEl = document.getElementById('contact_modal_name');
+                        if(titleEl) titleEl.textContent = titleStr;
+                        if(nameEl) nameEl.textContent = userName;
+                        
+                        contactModal.style.display = 'flex';
+                    } else {
+                        alert('Thank you! Your message has been sent successfully.');
+                    }
+                    
                     form.reset();
                 } else {
                     alert('Error: ' + (result.error || 'Failed to send message. Please try again.'));
@@ -143,7 +161,7 @@
     // Favicon Injection
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
-    favicon.href = 'images/logo.png';
+    favicon.href = 'favicon.png';
     favicon.type = 'image/png';
     document.head.appendChild(favicon);
 
@@ -497,4 +515,47 @@
         if (e.key === 'Enter') handleSend();
     });
 
+    // Auto-trigger hover effects on mobile via IntersectionObserver
+    if (window.matchMedia("(max-width: 992px)").matches || window.matchMedia("(hover: none)").matches) {
+        const styleSheet = document.createElement('style');
+        let cssText = '';
+        
+        try {
+            for (const sheet of document.styleSheets) {
+                if (!sheet.href || sheet.href.includes(window.location.host)) {
+                    for (const rule of sheet.cssRules) {
+                        if (rule.selectorText && rule.selectorText.includes(':hover')) {
+                            // Target common card classes that have hover effects
+                            if (rule.selectorText.match(/\.(process-card|service-card|culture-card|job-card|value-card|team-card)/)) {
+                                const newSelector = rule.selectorText.replace(/:hover/g, '.mobile-hover-active');
+                                cssText += newSelector + ' { ' + rule.style.cssText + ' }\n';
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            console.warn("Could not parse stylesheets for mobile hovers", e);
+        }
+        
+        if (cssText) {
+            styleSheet.textContent = cssText;
+            document.head.appendChild(styleSheet);
+        }
+
+        const hoverElements = document.querySelectorAll('.service-card, .process-card, .culture-card, .job-card, .value-card, .team-card');
+        const observerOptions = { root: null, rootMargin: '-20% 0px -20% 0px', threshold: 0.3 };
+
+        const hoverObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('mobile-hover-active');
+                } else {
+                    entry.target.classList.remove('mobile-hover-active');
+                }
+            });
+        }, observerOptions);
+
+        hoverElements.forEach(el => hoverObserver.observe(el));
+    }
 });

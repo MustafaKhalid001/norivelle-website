@@ -79,47 +79,6 @@
     </section>
 
     <!-- Open Positions -->
-    <section style="background-color: var(--bg-secondary); padding: 5rem 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Open Positions</h2>
-                <p>Ready to make an impact? Check out our current openings.</p>
-            </div>
-            
-            <div class="jobs-list">
-                
-                <!-- Job 1 -->
-                <div class="job-card">
-                    <div class="job-info">
-                        <h3>Senior SEO Specialist</h3>
-                        <div class="job-tags">
-                            <span><i class="fa-solid fa-location-dot"></i> Lahore (Hybrid)</span>
-                            <span><i class="fa-solid fa-clock"></i> Full-Time</span>
-                            <span><i class="fa-solid fa-money-bill"></i> Competitive</span>
-                        </div>
-                    </div>
-                    <a href="mailto:careers@norivellesolution.com?subject=Application:%20Senior%20SEO%20Specialist" class="btn btn-outline">Apply Now</a>
-                </div>
-
-                <!-- Job 2 -->
-                <div class="job-card">
-                    <div class="job-info">
-                        <h3>WordPress / PHP Developer</h3>
-                        <div class="job-tags">
-                            <span><i class="fa-solid fa-location-dot"></i> Remote (Global)</span>
-                            <span><i class="fa-solid fa-clock"></i> Full-Time</span>
-                            <span><i class="fa-solid fa-money-bill"></i> Competitive</span>
-                        </div>
-                    </div>
-                    <a href="mailto:careers@norivellesolution.com?subject=Application:%20WordPress%20Developer" class="btn btn-outline">Apply Now</a>
-                </div>
-
-                <!-- Job 3 -->
-                <div class="job-card">
-                    <div class="job-info">
-                        <h3>Creative Video Editor</h3>
-                        <div class="job-tags">
-                            <span><i class="fa-solid fa-location-dot"></i> Lahore (On-site)</span>
                             <span><i class="fa-solid fa-clock"></i> Full-Time</span>
                             <span><i class="fa-solid fa-money-bill"></i> Competitive</span>
                         </div>
@@ -298,7 +257,7 @@
                             </div>
 
                             <!-- CNIC / B-Form -->
-                            <div class="form-group">
+                            <div class="form-group" id="cnic_front_group">
                                 <label id="cnic_label" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color);">CNIC / B-Form (Scanned Copy) <span style="color: var(--primary);">*</span></label>
                                 <div class="file-upload-box" id="cnic-box" onclick="document.getElementById('file_cnic').click()" style="border: 2px dashed var(--border-color); border-radius: 8px; padding: 20px; text-align: center; cursor: pointer; transition: all 0.3s ease; background: var(--bg-color);">
                                     <i class="fa-solid fa-id-card" style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"></i>
@@ -306,6 +265,18 @@
                                     <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">(Image or PDF)</p>
                                     <input type="file" id="file_cnic" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
                                     <p class="file-name-display" id="name_cnic" style="margin-top: 10px; font-weight: bold; color: var(--primary); display: none;"></p>
+                                </div>
+                            </div>
+
+                            <!-- CNIC Back (Only for Age >= 18) -->
+                            <div class="form-group" id="cnic_back_group" style="display: none; margin-top: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color);">CNIC Back Side (Scanned Copy) <span style="color: var(--primary);">*</span></label>
+                                <div class="file-upload-box" id="cnic-back-box" onclick="document.getElementById('file_cnic_back').click()" style="border: 2px dashed var(--border-color); border-radius: 8px; padding: 20px; text-align: center; cursor: pointer; transition: all 0.3s ease; background: var(--bg-color);">
+                                    <i class="fa-solid fa-id-card" style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"></i>
+                                    <p style="margin: 0; color: var(--text-muted);">Drag & Drop your CNIC Back Side here or <span style="color: var(--primary); font-weight: bold;">Click to Upload</span></p>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">(Image or PDF)</p>
+                                    <input type="file" id="file_cnic_back" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                                    <p class="file-name-display" id="name_cnic_back" style="margin-top: 10px; font-weight: bold; color: var(--primary); display: none;"></p>
                                 </div>
                             </div>
                         </div>
@@ -340,6 +311,8 @@
                 let coverFileName = '';
                 let cnicFileBase64 = null;
                 let cnicFileName = '';
+                let cnicBackFileBase64 = null;
+                let cnicBackFileName = '';
 
                 function setupFileUpload(inputId, boxId, nameDisplayId, callback) {
                     const fileInput = document.getElementById(inputId);
@@ -391,6 +364,7 @@
                 setupFileUpload('file_resume', 'resume-box', 'name_resume', (b64, name) => { resumeFileBase64 = b64; resumeFileName = name; });
                 setupFileUpload('file_cover', 'cover-box', 'name_cover', (b64, name) => { coverFileBase64 = b64; coverFileName = name; });
                 setupFileUpload('file_cnic', 'cnic-box', 'name_cnic', (b64, name) => { cnicFileBase64 = b64; cnicFileName = name; });
+                setupFileUpload('file_cnic_back', 'cnic-back-box', 'name_cnic_back', (b64, name) => { cnicBackFileBase64 = b64; cnicBackFileName = name; });
 
                 function updateFormSteps() {
                     formSteps.forEach((step, index) => {
@@ -427,18 +401,17 @@
                     const age = parseInt(ageInput.value, 10);
                     const cnicLabel = document.getElementById('cnic_label');
                     const cnicDesc = document.getElementById('cnic_desc');
-                    const nameCnic = document.getElementById('name_cnic');
+                    const cnicBackGroup = document.getElementById('cnic_back_group');
                     
-                    if (cnicLabel && cnicDesc) {
+                    if (cnicLabel && cnicDesc && cnicBackGroup) {
                         if (age < 18) {
                             cnicLabel.innerHTML = 'B-Form (Scanned Copy) <span style="color: var(--primary);">*</span>';
                             cnicDesc.innerHTML = 'Drag & Drop your B-Form here or <span style="color: var(--primary); font-weight: bold;">Click to Upload</span>';
-                            if(!nameCnic.textContent) {
-                                // Just visual hint reset
-                            }
+                            cnicBackGroup.style.display = 'none';
                         } else {
-                            cnicLabel.innerHTML = 'CNIC (Scanned Copy) <span style="color: var(--primary);">*</span>';
-                            cnicDesc.innerHTML = 'Drag & Drop your CNIC here or <span style="color: var(--primary); font-weight: bold;">Click to Upload</span>';
+                            cnicLabel.innerHTML = 'CNIC Front Side (Scanned Copy) <span style="color: var(--primary);">*</span><br><span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted); display: block; margin-top: 5px;">Note: Please ensure you upload clear, scanned copies of both the front and back sides of your CNIC.</span>';
+                            cnicDesc.innerHTML = 'Drag & Drop your CNIC Front Side here or <span style="color: var(--primary); font-weight: bold;">Click to Upload</span>';
+                            cnicBackGroup.style.display = 'block';
                         }
                     }
                 };
@@ -516,15 +489,19 @@
                     
                     // Final Validation for Step 4
                     const resumeLink = document.getElementById('link_resume').value.trim();
-                    const cnicFile = cnicFileBase64;
+                    const age = parseInt(document.getElementById('app_age').value, 10);
                     let isValid = true;
                     
                     if (!resumeFileBase64 && !resumeLink) {
                         alert('Please upload your Resume or provide a link.');
                         isValid = false;
                     }
-                    if (!cnicFile) {
-                        alert('Please upload your CNIC or B-Form.');
+                    if (!cnicFileBase64) {
+                        alert(age < 18 ? 'Please upload your B-Form.' : 'Please upload your CNIC Front Side.');
+                        isValid = false;
+                    }
+                    if (age >= 18 && !cnicBackFileBase64) {
+                        alert('Please upload your CNIC Back Side.');
                         isValid = false;
                     }
 
@@ -560,7 +537,10 @@
                         payload.files.push({ name: coverFileName, content: coverFileBase64 });
                     }
                     if (cnicFileBase64) {
-                        payload.files.push({ name: cnicFileName, content: cnicFileBase64 });
+                        payload.files.push({ name: (age < 18 ? 'B-Form_' : 'CNIC_Front_') + cnicFileName, content: cnicFileBase64 });
+                    }
+                    if (cnicBackFileBase64) {
+                        payload.files.push({ name: 'CNIC_Back_' + cnicBackFileName, content: cnicBackFileBase64 });
                     }
 
                     try {
@@ -584,7 +564,7 @@
                             setTimeout(() => {
                                 document.getElementById('career-application-form').reset();
                                 currentStep = 0;
-                                resumeFileBase64 = null; coverFileBase64 = null; cnicFileBase64 = null;
+                                resumeFileBase64 = null; coverFileBase64 = null; cnicFileBase64 = null; cnicBackFileBase64 = null;
                                 document.querySelectorAll('.file-name-display').forEach(el => el.style.display = 'none');
                                 updateFormSteps();
                                 submitBtn.style.display = 'inline-block';
@@ -611,7 +591,7 @@
         <div id="success-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
             <div style="background-color: var(--bg-secondary); padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center; max-width: 500px; width: 90%; position: relative; animation: slideUp 0.5s ease-out; border: 2px solid var(--primary);">
                 <button onclick="document.getElementById('success-modal').style.display='none'" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer; transition: color 0.3s ease;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-solid fa-times"></i></button>
-                <img src="logo.png" alt="Norivelle Solution" style="height: 60px; margin-bottom: 20px;">
+                <img src="logo.png" alt="Norivelle Solution" style="display: block; margin: 0 auto 25px; width: 220px; height: auto; max-width: 100%;">
                 <div style="width: 60px; height: 60px; background-color: rgba(139, 92, 246, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary); font-size: 2rem;">
                     <i class="fa-solid fa-check"></i>
                 </div>

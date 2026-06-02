@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
@@ -124,11 +124,23 @@
                           </div>
                         </div>
 
-                        <!-- Country -->
-                        <div class="form-group">
-                          <label for="country">Country *</label>
-                          <select id="country" name="country" class="form-control" required>
-                            <!-- Placeholder: Please select your country -->
+                        <!-- Row 3 -->
+                        <div class="form-row">
+                          <!-- Gender -->
+                          <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" class="form-control" required>
+                              <option value="" disabled selected>-- Select Gender --</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                            </select>
+                          </div>
+
+                          <!-- Country -->
+                          <div class="form-group">
+                            <label for="country">Country *</label>
+                            <select id="country" name="country" class="form-control" required>
+                              <!-- Placeholder: Please select your country -->
                             <option value="" disabled selected>-- Please select your country --</option>
                             
                             <!-- Comprehensive Alphabetical List (Europe, Asia, Middle East-Excl. Israel, America) -->
@@ -477,7 +489,7 @@
                       <h4 style="color: var(--primary); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Inter', sans-serif;">Peace of Mind for Enterprise Clients</h4>
                       <h2 style="color: var(--primary); margin-bottom: 25px; font-family: 'Inter', sans-serif;">Norivelle Solution's 100% Satisfaction Guarantee</h2>
                       <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 40px; font-style: italic;">
-                          "Your success is our priority. We flawlessly stand by the quality of our services. If you're not completely satisfied, just contact our friendly support team for a full refund�no questions asked."
+                          "Your success is our priority. We flawlessly stand by the quality of our services. If you're not completely satisfied, just contact our friendly support team for a full refundno questions asked."
                       </p>
                       <a href="contact.html" class="btn btn-primary" style="background-color: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 15px 40px; font-size: 16px; border-radius: 50px; transition: all 0.3s ease; display: inline-block;" onmouseover="this.style.backgroundColor='var(--primary)'; this.style.color='white'; this.style.boxShadow='0 5px 15px rgba(139,92,246,0.4)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary)'; this.style.boxShadow='none';">Contact Our Team</a>
                   </div>
@@ -536,6 +548,23 @@
         </div>
     </section>
 
+    <!-- Contact Success Modal -->
+    <div id="contact-success-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
+        <div style="background-color: var(--bg-secondary); padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center; max-width: 500px; width: 90%; position: relative; animation: slideUp 0.5s ease-out; border: 2px solid var(--primary);">
+            <button type="button" onclick="document.getElementById('contact-success-modal').style.display='none'" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer; transition: color 0.3s ease;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-solid fa-times"></i></button>
+            <img src="logo.png" alt="Norivelle Solution" style="display: block; margin: 0 auto 25px; width: 220px; height: auto; max-width: 100%;">
+            <div style="width: 60px; height: 60px; background-color: rgba(139, 92, 246, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary); font-size: 2rem;">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h2 style="margin-bottom: 15px; font-family: 'Inter', sans-serif; color: var(--text-color);">Dear <span id="contact_modal_title"></span> <span id="contact_modal_name" style="color: var(--primary);"></span>!</h2>
+            <h3 style="margin-bottom: 20px; font-weight: 500; color: var(--text-color);">Your message has been received successfully.</h3>
+            <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+                Our team will contact you ASAP via the email address you provided. We look forward to connecting with you!
+            </p>
+            <button type="button" class="btn btn-primary" onclick="document.getElementById('contact-success-modal').style.display='none'" style="width: 100%; padding: 12px; font-size: 1.1rem; border-radius: 8px;">Okay</button>
+        </div>
+    </div>
+
     <!-- Footer -->
 
     <footer>
@@ -572,7 +601,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=2"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
