@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .team-card { background: var(--card-bg); border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow); text-align: center; border: 1px solid var(--border-color); }
-        .team-image { width: 100%; height: 300px; object-fit: cover; }
+        .team-card { background: var(--card-bg); border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow); text-align: center; border: 1px solid var(--border-color); transition: transform 0.4s ease, box-shadow 0.4s ease; cursor: pointer; }
+        .team-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2); border-color: var(--primary); }
+        .team-image { width: 100%; height: 300px; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .team-card:hover .team-image { transform: scale(1.08); }
         .team-info { padding: 1.5rem; }
         .social-links { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
         .social-links a { color: var(--text-muted); transition: color 0.3s; }
@@ -118,9 +120,9 @@
             </div>
             <div class="team-grid">
                 <div class="team-card">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team Member" class="team-image">
+                    <img src="images/owner.jpg" alt="Team Member" class="team-image">
                     <div class="team-info">
-                        <h3>James Sterling</h3>
+                        <h3>M. Mustafa Khalid</h3>
                         <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.5rem;">Founder & CEO</p>
                         <p style="font-size: 0.875rem;">Visionary leader with 10+ years scaling digital brands.</p>
                         <div class="social-links">
