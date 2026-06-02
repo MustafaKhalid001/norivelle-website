@@ -888,20 +888,22 @@ footer {
   align-items: center;
 }
 
-.rating-score { font-size: 18px; font-weight: 700; color: var(--brand-blue); }
+.rating-score { font-size: 18px; font-weight: 700; color: var(--primary); }
 [data-theme="dark"] .rating-score { color: #3b82f6; }
 .rating-text { font-size: 12px; color: var(--text-muted); }
 .logo-box strong { font-size: 16px; margin-bottom: 4px; }
 
 /* SCROLLING RIBBON */
 .scrolling-ribbon {
-  background-color: var(--brand-blue); 
-  color: white;
+  background-color: var(--bg-secondary); 
+  color: var(--text-main);
   padding: 12px 0;
   overflow: hidden;
   position: relative;
   width: 100%;
   white-space: nowrap;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .ribbon-content {
