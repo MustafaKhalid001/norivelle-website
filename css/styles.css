@@ -790,18 +790,6 @@ footer {
 
 .job-tags {
   display: flex;
-  gap: 1rem;
-  color: var(--text-muted);
-  font-size: 0.875rem;
-}
-
-@media (max-width: 768px) {
-  .job-card { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-}
-
-/* New Hero Layout */
-:root {
-  --brand-purple: #3f197a;
   --brand-purple-light: #5b21b6;
   --brand-blue: #0d47a1;
 }
